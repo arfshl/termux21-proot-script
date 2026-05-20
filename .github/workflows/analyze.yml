@@ -1,0 +1,28 @@
+name: "Analyze"
+
+on:
+  workflow_dispatch:
+  push:
+    branches: main
+    paths: 
+      - ".github/workflows/analyze.yml"
+
+permissions:
+  contents: write  
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - name: Go analyze the rootfs
+        run: | 
+          wget -q https://github.com/arfshl/pd-andronix/releases/download/opensuse/opensuse-x86_64.tar.xz --output-document test.tar.xz
+          
+          tar -xvpJf test.tar.xz
+
+          tree -d $GITHUB_WORKSPACE
+        continue-on-error: true
