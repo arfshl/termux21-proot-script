@@ -66,8 +66,8 @@ jobs:
               EOF
               sudo rm -f /tmp/opensuse-pkgs.txt
               # Make rootfs archive
-              cd $GITHUB_WORKSPACE/opensuse-dump
-              sudo tar --exclude=dev/* -cpf - opensuse-tumbleweed | xz -9 -T0 -c > $GITHUB_WORKSPACE/opensuse-tumbleweed-${{ matrix.arch }}.tar.xz
+              cd $GITHUB_WORKSPACE/opensuse-dump/opensuse-tumbleweed
+              sudo tar --exclude=dev/* -cpf - * | xz -9 -T0 -c > $GITHUB_WORKSPACE/opensuse-tumbleweed-${{ matrix.arch }}.tar.xz
   
       - name: Push to release
         uses: softprops/action-gh-release@v3
@@ -132,8 +132,8 @@ jobs:
               EOF
               sudo rm -f /tmp/opensuse-pkgs.txt
               # Make rootfs archive
-              cd $GITHUB_WORKSPACE/opensuse-dump
-              sudo tar --exclude=dev/* -cpf - opensuse-tumbleweed | xz -9 -T0 -c > $GITHUB_WORKSPACE/opensuse-tumbleweed-${{ matrix.arch }}.tar.xz
+              cd $GITHUB_WORKSPACE/opensuse-dump/opensuse-tumbleweed 
+              sudo tar --exclude=dev/* -cpf - * | xz -9 -T0 -c > $GITHUB_WORKSPACE/opensuse-tumbleweed-${{ matrix.arch }}.tar.xz
           
       - name: Push to release
         uses: softprops/action-gh-release@v3
@@ -200,8 +200,8 @@ jobs:
               EOF
               sudo rm -f /tmp/opensuse-pkgs.txt
               # Make rootfs archive
-              cd $GITHUB_WORKSPACE/opensuse-dump
-              sudo tar --exclude=dev/* -cpf - opensuse-tumbleweed | xz -9 -T0 -c > $GITHUB_WORKSPACE/opensuse-tumbleweed-${{ matrix.arch }}.tar.xz
+              cd $GITHUB_WORKSPACE/opensuse-dump/opensuse-tumbleweed 
+              sudo tar --exclude=dev/* -cpf - * | xz -9 -T0 -c > $GITHUB_WORKSPACE/opensuse-tumbleweed-${{ matrix.arch }}.tar.xz
                       
       - name: Push to release
         uses: softprops/action-gh-release@v3
