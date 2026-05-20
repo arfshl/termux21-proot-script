@@ -58,6 +58,7 @@ jobs:
               mount --bind /dev "./dump/dev"
               mount --bind /proc "./dump/proc"
               mount --bind /sys "./dump/sys"
+              mount --bind ./dump "./dump"
               #chroot "./dump" useradd -r -s /usr/bin/nologin -d /var/lib/pacman alpm
               chroot "./dump" pacman-key --init
               #chroot "./dump" pacman -Rnsc --noconfirm linux-$ARCH linux-firmware
@@ -123,6 +124,7 @@ jobs:
               mount --bind /dev "./dump/dev"
               mount --bind /proc "./dump/proc"
               mount --bind /sys "./dump/sys"
+              mount --bind ./dump "./dump"
               #chroot "./dump" useradd -r -s /usr/bin/nologin -d /var/lib/pacman alpm
               chroot "./dump" pacman-key --init
               #chroot "./dump" pacman -Rnsc --noconfirm linux-$ARCH linux-firmware
@@ -189,6 +191,7 @@ jobs:
               mount --bind /dev "./dump/dev"
               mount --bind /proc "./dump/proc"
               mount --bind /sys "./dump/sys"
+              mount --bind ./dump "./dump"
               #chroot "./dump" useradd -r -s /usr/bin/nologin -d /var/lib/pacman alpm
               chroot "./dump" pacman-key --init
               #chroot "./dump" pacman -Rnsc --noconfirm linux-$ARCH linux-firmware
