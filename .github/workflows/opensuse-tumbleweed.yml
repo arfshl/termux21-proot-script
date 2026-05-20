@@ -102,7 +102,7 @@ jobs:
               opensuse_manifest=$(docker manifest inspect opensuse/tumbleweed:latest)
               # Fetch image digest
               arch="$ARCH"
-              digest=$(echo "$opensuse_manifest" | jq -r ".manifests[] | select(.platform.architecture == \"$arch\") | .digest")
+              digest=$(echo "$opensuse_manifest" | jq -r ".manifests[] | select(.platform.architecture == \"$arch\") | select(.platform.variant == \"v7\") | .digest")
               
               # Pull and Export image
               mkdir --parent --mode 755 $GITHUB_WORKSPACE/opensuse-dump/opensuse-tumbleweed
