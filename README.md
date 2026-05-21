@@ -13,7 +13,7 @@ Supported Desktop Environment:
 |------------------|----------------------------|----------------|-----------------|
 | [Alpine Linux](https://github.com/arfshl/pd-andronix/tree/main/alpine) | CLI XFCE LXQt MATE | `arm` `aarch64` `x86` `x86_64` | `alpine:latest` |
 | [Alpine Linux Edge](https://github.com/arfshl/pd-andronix/tree/main/alpine-edge) | CLI XFCE LXQt MATE | `arm` `aarch64` `x86` `x86_64` | `alpine:edge` |
-| [Arch Linux](https://github.com/arfshl/pd-andronix/tree/main/arch) | CLI XFCE LXQt MATE LXDE | `arm` `aarch64` `x86_64` | `archlinux/archlinux` `ghcr.io/arfshl/archlinuxarm-docker:latest` |
+| [Arch Linux](https://github.com/arfshl/pd-andronix/tree/main/arch) | CLI XFCE LXQt MATE LXDE | `arm` `aarch64` `x86_64` | `archlinux/archlinux` `arfshl/archlinuxarm:latest` |
 | [Debian Stable](https://github.com/arfshl/pd-andronix/tree/main/debian) (Recommended for beginners) | CLI XFCE LXQt MATE LXDE | `arm` `aarch64` `x86_64` | `debian:stable` |
 | [Fedora](https://github.com/arfshl/pd-andronix/tree/main/fedora) | CLI XFCE LXQt MATE LXDE | `aarch64` `x86_64` | `fedora:latest` |
 | [Manjaro](https://github.com/arfshl/pd-andronix/tree/main/manjaro) | CLI XFCE LXQt MATE LXDE | `aarch64` `x86_64` | `manjarolinux/base` | 
