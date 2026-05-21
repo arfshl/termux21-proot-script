@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        arch: [x86_64, x86]
+        arch: [x86_64]
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v6
@@ -168,7 +168,7 @@ jobs:
               manifest=$(docker manifest inspect ghcr.io/void-linux/void-musl:latest)
               # Fetch image digest
               arch="$ARCH"
-              digest=$(echo "$manifest" | jq -r ".manifests[] | select(.platform.architecture == \"$arch\") | select(.platform.architecture == \"$arch\") | .digest")
+              digest=$(echo "$manifest" | jq -r ".manifests[] | select(.platform.architecture == \"$arch\") | select(.platform.variant == \"v7\") | .digest")
               # Pull and Export image
               docker pull "ghcr.io/void-linux/void-musl:latest@${digest}"
               docker export $(docker create "ghcr.io/void-linux/void-musl:latest@${digest}") | xz -T 0 > "$GITHUB_WORKSPACE/void-musl-${{ matrix.arch }}.tar.xz"
