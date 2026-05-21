@@ -68,8 +68,8 @@ jobs:
       - name: Push to release
         uses: softprops/action-gh-release@v3
         with:
-          tag_name: Ubuntu Latest
-          name: ubuntu
+          tag_name: ubuntu
+          name: Ubuntu Latest
           files: |
             ubuntu-*.tar.xz
           preserve_order: true
@@ -133,8 +133,8 @@ jobs:
       - name: Push to release
         uses: softprops/action-gh-release@v3
         with:
-          tag_name: Ubuntu Latest
-          name: ubuntu
+          tag_name: ubuntu
+          name: Ubuntu Latest
           files: |
             ubuntu-*.tar.xz
           preserve_order: true
