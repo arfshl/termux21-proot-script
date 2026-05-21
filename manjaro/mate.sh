@@ -15,25 +15,26 @@ case "$ARCH" in
     aarch64|arm64) 
         ARCH="aarch64" 
         ;;
+    amd64|x86_64) 
+        ARCH="x86_64" 
+        ;;
     *)
         echo "Unsupported architecture: $ARCH"
         exit 1
         ;;
 esac
 
-mkdir -p /data/data/com.termux/files/home/pd-andronix/manjaro-mate
+mkdir -p /data/data/com.termux/files/home/pd-andronix/manjaro-mate/manjaro
 cd /data/data/com.termux/files/home/pd-andronix/manjaro-mate
-URL=$(curl -Ls https://github.com/termux/proot-distro/raw/master/distro-plugins/manjaro.sh | grep "TARBALL_URL\['$ARCH'\]" | cut -d '"' -f2)
-curl -L $URL --output manjaro.tar.xz
-proot --link2symlink tar -xJpf manjaro.tar.xz
+curl -L https://github.com/arfshl/pd-andronix/releases/download/manjaro/manjarolinux-${ARCH}.tar.xz --output manjaro.tar.xz
+proot --link2symlink tar -xJpf manjaro.tar.xz -C manjaro
 rm manjaro.tar.xz
-mv manjaro-* manjaro
 mkdir -p /data/data/com.termux/files/home/pd-andronix/manjaro-mate/binds
 mkdir -p /data/data/com.termux/files/home/pd-andronix/manjaro-mate/manjaro/proc/fakethings
 
 # A function for preparing fake content for certain system data interfaces which known to be restricted on Android OS.
 # All /proc entries are based on values retrieved from Fedora 43 KDE running on an expertbook-b1402cba, intel i3-1215u, and 8 GB of memory. Date 27/4/2026, Linux version 6.19.13-200.fc43.x86_64 
-
+# Dedicated for: 1004200828
 if [ ! -f "/data/data/com.termux/files/home/pd-andronix/manjaro-mate/manjaro/proc/fakethings/version" ]; then
 cat << "EOF" > "/data/data/com.termux/files/home/pd-andronix/manjaro-mate/manjaro/proc/fakethings/version"
 Linux version 6.19.13-1004200828 (arfshl@pd-andronix) (gcc (GCC) 15.2.1 12092021 (05232022) GNU ld version 2.45.10-31012026 #1 SMP PREEMPT_DYNAMIC Fri Apr 10 04:52:00 WIB 2026

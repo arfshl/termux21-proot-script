@@ -12,9 +12,6 @@ echo "download and extract rootfs under /data/data/com.termux/files/home/pd-andr
 
 ARCH=$(uname -m)
 case "$ARCH" in
-    armhf|arm|armv7l) 
-        ARCH="arm" 
-        ;;
     aarch64|arm64) 
         ARCH="aarch64" 
         ;;
@@ -30,17 +27,17 @@ case "$ARCH" in
         ;;
 esac
 
-mkdir -p /data/data/com.termux/files/home/pd-andronix/opensuse-tumbleweed-xfce
+mkdir -p /data/data/com.termux/files/home/pd-andronix/opensuse-tumbleweed-xfce/opensuse-tumbleweed
 cd /data/data/com.termux/files/home/pd-andronix/opensuse-tumbleweed-xfce
-curl -L https://github.com/arfshl/pd-custom-rootfs/releases/download/opensuse-tumbleweed/opensuse-tumbleweed-$ARCH.tar.xz --output opensuse-tumbleweed.tar.xz
-proot --link2symlink tar -xJpf opensuse-tumbleweed.tar.xz
+curl -L https://github.com/arfshl/pd-andronix/releases/download/opensuse-tumbleweed/opensuse-tumbleweed-${ARCH}.tar.xz --output opensuse-tumbleweed.tar.xz
+proot --link2symlink tar -xJpf opensuse-tumbleweed.tar.xz -C opensuse-tumbleweed
 rm opensuse-tumbleweed.tar.xz
 mkdir -p /data/data/com.termux/files/home/pd-andronix/opensuse-tumbleweed-xfce/binds
 mkdir -p /data/data/com.termux/files/home/pd-andronix/opensuse-tumbleweed-xfce/opensuse-tumbleweed/proc/fakethings
 
 # A function for preparing fake content for certain system data interfaces which known to be restricted on Android OS.
 # All /proc entries are based on values retrieved from Fedora 43 KDE running on an expertbook-b1402cba, intel i3-1215u, and 8 GB of memory. Date 27/4/2026, Linux version 6.19.13-200.fc43.x86_64 
-
+# Dedicated to: 1004200828
 if [ ! -f "/data/data/com.termux/files/home/pd-andronix/opensuse-tumbleweed-xfce/opensuse-tumbleweed/proc/fakethings/version" ]; then
 cat << "EOF" > "/data/data/com.termux/files/home/pd-andronix/opensuse-tumbleweed-xfce/opensuse-tumbleweed/proc/fakethings/version"                                      
 Linux version 6.19.13-1004200828 (arfshl@pd-andronix) (gcc (GCC) 15.2.1 12092021 (05232022) GNU ld version 2.45.10-31012026 #1 SMP PREEMPT_DYNAMIC Fri Apr 10 04:52:00 WIB 2026
