@@ -58,8 +58,8 @@ jobs:
               mount --bind /proc "./dump/proc"
               mount --bind /sys "./dump/sys"
               mount --bind ./dump "./dump"
-              chroot "./dump" xbps-install -Su 
-              chroot "./dump" xbps-install -S bash -y
+              chroot "./dump" xbps-install -Syu 
+              chroot "./dump" xbps-install -Sy bash
               chroot "./dump" chsh -s /bin/bash root
               EOF
               
@@ -120,8 +120,8 @@ jobs:
               mount --bind /proc "./dump/proc"
               mount --bind /sys "./dump/sys"
               mount --bind ./dump "./dump"
-              chroot "./dump" xbps-install -Su 
-              chroot "./dump" xbps-install -S bash -y
+              chroot "./dump" xbps-install -Syu 
+              chroot "./dump" xbps-install -Sy bash
               chroot "./dump" chsh -s /bin/bash root
               EOF
               
