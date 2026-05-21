@@ -59,7 +59,7 @@ jobs:
               mount --bind /sys "./dump/sys"
               mount --bind ./dump "./dump"
               chroot "./dump" xbps-install -Syu 
-              chroot "./dump" xbps-install -Sy bash
+              chroot "./dump" xbps-install -Sy bash util-linux
               chroot "./dump" chsh -s /bin/bash root
               EOF
               
@@ -121,7 +121,7 @@ jobs:
               mount --bind /sys "./dump/sys"
               mount --bind ./dump "./dump"
               chroot "./dump" xbps-install -Syu 
-              chroot "./dump" xbps-install -Sy bash
+              chroot "./dump" xbps-install -Sy bash util-linux
               chroot "./dump" chsh -s /bin/bash root
               EOF
               
