@@ -58,7 +58,7 @@ jobs:
               chroot "./dump" apt install -yq gnu-coreutils
               chroot "./dump" apt install -yq coreutils-from-gnu
               chroot "./dump" apt clean
-              sudo rm -f ./dump/var/lib/apt/lists/*
+              sudo rm -rf ./dump/var/lib/apt/lists/*
               EOF
               
               cd $GITHUB_WORKSPACE/dump
@@ -123,7 +123,7 @@ jobs:
               chroot "./dump" apt install -yq gnu-coreutils
               chroot "./dump" apt install -yq coreutils-from-gnu
               chroot "./dump" apt clean
-              sudo rm -f ./dump/var/lib/apt/lists/*
+              sudo rm -rf ./dump/var/lib/apt/lists/*
               EOF
               
               cd $GITHUB_WORKSPACE/dump
@@ -176,7 +176,7 @@ jobs:
               chroot "./dump" apt install -yq gnu-coreutils
               chroot "./dump" apt install -yq coreutils-from-gnu
               chroot "./dump" apt clean
-              sudo rm -f ./dump/var/lib/apt/lists/*
+              sudo rm -rf ./dump/var/lib/apt/lists/*
               EOF
               
               cd $GITHUB_WORKSPACE/dump
