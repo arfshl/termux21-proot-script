@@ -77,7 +77,7 @@ jobs:
           tag_name: manjaro
           name: Manjaro
           files: |
-            manjaro-*.tar.xz
+            manjarolinux-*.tar.xz
           preserve_order: true
 
   build-arm64:
@@ -143,5 +143,5 @@ jobs:
           tag_name: manjaro
           name: Manjaro
           files: |
-            manjaro-*.tar.xz
+            manjarolinux-*.tar.xz
           preserve_order: true
