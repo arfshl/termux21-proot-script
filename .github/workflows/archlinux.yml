@@ -106,13 +106,13 @@ jobs:
               ;;
               esac
               # Fetch image manifest
-              manifest=$(docker manifest inspect danhunsaker/archlinuxarm)
+              manifest=$(docker manifest inspect ghcr.io/arfshl/archlinuxarm-docker:latest)
               # Fetch image digest
               arch="$ARCH"
               digest=$(echo "$manifest" | jq -r ".manifests[] | select(.platform.architecture == \"$arch\") | .digest")
               # Pull and Export image
-              docker pull "danhunsaker/archlinuxarm@${digest}"
-              docker export $(docker create "danhunsaker/archlinuxarm@${digest}") | xz -T 0 > "$GITHUB_WORKSPACE/archlinux-${{ matrix.arch }}.tar.xz"
+              docker pull "ghcr.io/arfshl/archlinuxarm-docker:latest@${digest}"
+              docker export $(docker create "ghcr.io/arfshl/archlinuxarm-docker:latest@${digest}") | xz -T 0 > "$GITHUB_WORKSPACE/archlinux-${{ matrix.arch }}.tar.xz"
               mkdir dump
               sudo tar -xJpf archlinux-${{ matrix.arch }}.tar.xz -C dump
               sudo rm archlinux-${{ matrix.arch }}.tar.xz
@@ -173,13 +173,13 @@ jobs:
               ;;
               esac
               # Fetch image manifest
-              manifest=$(docker manifest inspect danhunsaker/archlinuxarm)
+              manifest=$(docker manifest inspect ghcr.io/arfshl/archlinuxarm-docker:latest)
               # Fetch image digest
               arch="$ARCH"
               digest=$(echo "$manifest" | jq -r ".manifests[] | select(.platform.architecture == \"$arch\") | select(.platform.variant == \"v7\") | .digest")
               # Pull and Export image
-              docker pull "danhunsaker/archlinuxarm@${digest}"
-              docker export $(docker create "danhunsaker/archlinuxarm@${digest}") | xz -T 0 > "$GITHUB_WORKSPACE/archlinux-${{ matrix.arch }}.tar.xz"
+              docker pull "ghcr.io/arfshl/archlinuxarm-docker:latest@${digest}"
+              docker export $(docker create "ghcr.io/arfshl/archlinuxarm-docker:latest@${digest}") | xz -T 0 > "$GITHUB_WORKSPACE/archlinux-${{ matrix.arch }}.tar.xz"
               mkdir dump
               sudo tar -xJpf archlinux-${{ matrix.arch }}.tar.xz -C dump
               sudo rm archlinux-${{ matrix.arch }}.tar.xz
