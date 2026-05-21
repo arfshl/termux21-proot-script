@@ -50,4 +50,6 @@ Replace [distro aliases] with distro alias you're using, available on installati
 
 [linuxmasterdroid/termux-desktops](https://github.com/LinuxDroidMaster/Termux-Desktops) Pulseaudio startup mechanism, Licensed under GPLv3.
 
+[Termux PRoot Distro v4](https://github.com/termux/proot-distro/tree/98b6d71aaf74b4fe2fc545cab32a7ecc879ad8e9) rootfs build workflows, Licensed under GPLv3.
+
 Pulseaudio fix for One UI, [Issue #19623 on termux-packages](https://github.com/termux/termux-packages/issues/19623)
