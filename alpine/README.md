@@ -4,7 +4,7 @@
 - distro aliases: alpine-cli
 
 #### Install
-    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/alpine/cli.sh && sh cli.sh
+    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/alpine/cli.sh && sh cli.sh && rm ~/cli.sh
    
 
 ## XFCE
@@ -16,7 +16,7 @@
 
 
 #### Install
-    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/alpine/xfce.sh && sh xfce.sh
+    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/alpine/xfce.sh && sh xfce.sh && rm ~/xfce.sh
 
 #### Install Web Browser, Media Player, Utility (Execute on rootfs)
     sudo apk add firefox vlc thunderbird  libheif webp-pixbuf-loader p7zip atril ristretto galculator xarchiver mousepad
@@ -30,7 +30,7 @@
 
 
 #### Install
-    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/alpine/lxqt.sh && sh lxqt.sh
+    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/alpine/lxqt.sh && sh lxqt.sh && rm ~/lxqt.sh
 
 ## MATE
 - distro aliases: alpine-mate
@@ -41,7 +41,7 @@
 
 
 #### Install
-    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/alpine/mate.sh && sh mate.sh
+    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/alpine/mate.sh && sh mate.sh && rm ~/mate.sh
 
 
 ## Installing Chromium

@@ -4,7 +4,7 @@
 - distro aliases: opensuse-tumbleweed-cli
 
 #### Install
-    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/opensuse-tumbleweed/cli.sh && sh cli.sh
+    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/opensuse-tumbleweed/cli.sh && sh cli.sh && rm ~/cli.sh
 
 ## XFCE
 - distro aliases: opensuse-tumbleweed-xfce
@@ -15,7 +15,7 @@
 
 
 #### Install
-    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/opensuse-tumbleweed/xfce.sh && sh xfce.sh
+    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/opensuse-tumbleweed/xfce.sh && sh xfce.sh && rm ~/xfce.sh
 
 #### Install Web Browser, Media Player, Utility (Execute on rootfs)
     sudo zypper  in  firefox  vlc thunderbird  libheif1 webp-pixbuf-loader p7zip atril ristretto galculator xarchiver mousepad 
@@ -29,7 +29,7 @@
 
 
 #### Install
-    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/opensuse-tumbleweed/mate.sh && sh mate.sh
+    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/opensuse-tumbleweed/mate.sh && sh mate.sh && rm ~/mate.sh
 
 #### Install Web Browser, Media Player, Utility (Execute on rootfs)
     sudo zypper  in firefox  vlc thunderbird  libheif1 webp-pixbuf-loader p7zip atril eom mate-calc engrampa pluma
@@ -43,7 +43,7 @@
 
 
 #### Install
-    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/opensuse-tumbleweed/lxqt.sh && sh lxqt.sh
+    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/opensuse-tumbleweed/lxqt.sh && sh lxqt.sh && rm ~/lxqt.sh
 
 #### Install Web Browser, Media Player, Utility (Execute on rootfs)
     sudo zypper  in firefox  vlc thunderbird  libheif1 webp-pixbuf-loader p7zip lximage-qt kcalc lxqt-archiver qpdfview featherpad
@@ -58,7 +58,7 @@
 
 
 #### Install
-    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/opensuse-tumbleweed/lxde.sh && sh lxde.sh
+    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/opensuse-tumbleweed/lxde.sh && sh lxde.sh && rm ~/lxde.sh
 
 #### Install Web Browser, Media Player, Utility (Execute on rootfs)
     sudo zypper  in firefox  vlc thunderbird  libheif1 webp-pixbuf-loader p7zip atril gpicview galculator xarchiver mousepad 

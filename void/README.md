@@ -4,7 +4,7 @@
 - distro aliases: void-cli
 
 #### Install
-    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/void/cli.sh && sh cli.sh
+    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/void/cli.sh && sh cli.sh && rm ~/cli.sh
 
 ## XFCE
 - distro aliases: void-xfce
@@ -15,7 +15,7 @@
 
 
 #### Install
-    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/void/xfce.sh && sh xfce.sh
+    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/void/xfce.sh && sh xfce.sh && rm ~/xfce.sh
 
 # LXQt
 - distro aliases: void-lxqt
@@ -26,7 +26,7 @@
 
 
 #### Install
-    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/void/lxqt.sh && sh lxqt.sh
+    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/void/lxqt.sh && sh lxqt.sh && rm ~/lxqt.sh
 
 
 # MATE
@@ -38,7 +38,7 @@
 
 
 #### Install
-    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/void/mate.sh && sh mate.sh
+    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/void/mate.sh && sh mate.sh && rm ~/mate.sh
 
 
 # LXDE
@@ -50,7 +50,7 @@
 
 
 #### Install
-    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/void/lxde.sh && sh lxde.sh
+    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/void/lxde.sh && sh lxde.sh && rm ~/lxde.sh
 
 
 ## Installing Chromium

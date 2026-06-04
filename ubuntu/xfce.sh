@@ -28,7 +28,7 @@ case "$ARCH" in
         ;;
 esac
 
-mkdir -p /data/data/com.termux/files/home/pd-andronix/ubuntu-xfce
+mkdir -p /data/data/com.termux/files/home/pd-andronix/ubuntu-xfce/ubuntu
 cd /data/data/com.termux/files/home/pd-andronix/ubuntu-xfce
 curl -L https://github.com/arfshl/pd-andronix/releases/download/ubuntu/ubuntu-$ARCH.tar.xz --output ubuntu.tar.xz
 proot --link2symlink tar -xJpf ubuntu.tar.xz -C ubuntu

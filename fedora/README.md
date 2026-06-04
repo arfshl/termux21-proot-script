@@ -4,7 +4,7 @@
 - distro aliases: fedora-cli
 
 #### Install
-    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/fedora/cli.sh && sh cli.sh
+    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/fedora/cli.sh && sh cli.sh && rm ~/cli.sh
 
 ## XFCE
 - distro aliases: fedora-xfce
@@ -15,7 +15,7 @@
 
 
 #### Install
-    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/fedora/xfce.sh && sh xfce.sh
+    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/fedora/xfce.sh && sh xfce.sh && rm ~/xfce.sh
 
 #### Install Web Browser, Media Player, Utility (Execute on rootfs)
     sudo dnf update && sudo dnf install firefox vlc thunderbird atril ristretto galculator libheif xarchiver webp-pixbuf-loader p7zip mousepad 
@@ -29,7 +29,7 @@
 
 
 #### Install
-    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/fedora/lxqt.sh && sh lxqt.sh
+    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/fedora/lxqt.sh && sh lxqt.sh && rm ~/lxqt.sh
 
 #### Install Web Browser, Media Player, Utility (Execute on rootfs)
     sudo dnf update && sudo dnf install firefox vlc thunderbird lximage-qt kcalc lxqt-archiver qpdf libheif webp-pixbuf-loader p7zip featherpad 
@@ -44,7 +44,7 @@
 
 
 #### Install
-    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/fedora/mate.sh && sh mate.sh
+    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/fedora/mate.sh && sh mate.sh && rm ~/mate.sh
 
 #### Install Web Browser, Media Player, Utility (Execute on rootfs)
     sudo dnf update && sudo dnf install firefox vlc thunderbird engrampa atril eom mate-calc pluma libheif webp-pixbuf-loader p7zip 
@@ -59,7 +59,7 @@
 
 
 #### Install
-    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/fedora/lxde.sh && sh lxde.sh
+    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/fedora/lxde.sh && sh lxde.sh && rm ~/lxde.sh
 
 #### Install Web Browser, Media Player, Utility (Execute on rootfs)
     sudo dnf update && sudo dnf install firefox vlc thunderbird xarchiver atril mousepad galculator gpicview libheif webp-pixbuf-loader p7zip 
