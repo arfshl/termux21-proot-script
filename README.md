@@ -1,4 +1,4 @@
-## Fork of andronixapp/andronixorigin with more up-to-date distros
+## Lightweight implementation of proot with bash script w/o proot-distro. Fork of andronixapp/andronixorigin.
 
 ## You Need
 - [Termux App](https://github.com/termux/termux-app/releases)
