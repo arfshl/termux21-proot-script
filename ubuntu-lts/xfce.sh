@@ -5,7 +5,9 @@ apt update
 apt upgrade -y -o Dpkg::Options::="--force-confold"
 
 # Install depedency
-apt install curl wget nano proot tar xz-utils -y
+apt install x11-repo tur-repo
+apt update
+apt install curl wget nano proot-distro termux-x11 pulseaudio vulkan-loader-android mesa-zink virglrenderer-mesa-zink virglrenderer-android -y
 
 # download and extract rootfs under /data/data/com.termux/files/home/termux-proot-script/<distroname>
 echo "download and extract rootfs under /data/data/com.termux/files/home/termux-proot-script/<distroname>"
@@ -30,7 +32,7 @@ esac
 mkdir -p /data/data/com.termux/files/home/termux-proot-script/ubuntu-lts-xfce/ubuntu-lts
 cd /data/data/com.termux/files/home/termux-proot-script/ubuntu-lts-xfce
 curl -L https://github.com/arfshl/termux-proot-script/releases/download/ubuntu-lts/ubuntu-lts-$ARCH.tar.xz --output ubuntu-lts.tar.xz
-proot --link2symlink tar -xJpf ubuntu-lts.tar.xz -C ubuntu
+proot --link2symlink tar -xJpf ubuntu-lts.tar.xz -C ubuntu-lts
 rm ubuntu-lts.tar.xz
 mkdir -p /data/data/com.termux/files/home/termux-proot-script/ubuntu-lts-xfce/binds
 mkdir -p /data/data/com.termux/files/home/termux-proot-script/ubuntu-lts-xfce/ubuntu-lts/proc/fakethings
@@ -100,6 +102,8 @@ command+=(
   -b "${root}/ubuntu-lts/proc/fakethings/stat:/proc/stat"
   -b "${root}/ubuntu-lts/proc/fakethings/vmstat:/proc/vmstat"
   -b "${root}/ubuntu-lts/proc/fakethings/version:/proc/version"
+  -b "${root}/ubuntu-lts/proc/fakethings/loadavg:/proc/loadavg"
+  -b $PREFIX/tmp:/tmp
   # uncomment the following line to have access to the home directory of termux
   #-b /data/data/com.termux/files/home:/root/termux-home
   # uncomment the following line to the home sdcard
@@ -134,8 +138,25 @@ ubuntu-lts-xfce 'apt update && apt install wget -y'
 
 ubuntu-lts-xfce 'wget https://raw.githubusercontent.com/arfshl/proot-distro-desktop/refs/heads/main/ubuntu/xfce/install.sh -O install.sh && chmod +x install.sh && ./install.sh'
 
+# setup x11 script
+cat <<'EOF' > /data/data/com.termux/files/usr/bin/ubuntu-lts-xfce-x11-2
+#!/usr/bin/env bash
+LD_PRELOAD=/system/lib64/libskcodec.so
+pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
+export XDG_RUNTIME_DIR=${TMPDIR}
+kill -9 $(pgrep -f "termux.x11") 2>/dev/null
+kill -9 $(pgrep -f "virgl") 2>/dev/null
+ubuntu-lts-xfce 'pkill -x -9 x11 2>/dev/null'
+virgl_test_server_android &
+termux-x11 :0 >/dev/null &
+sleep 3
+ubuntu-lts-xfce 'export PULSE_SERVER=127.0.0.1 && export XDG_RUNTIME_DIR=${TMPDIR} && su - ubuntu-xfce -c "DISPLAY=:0 GALLIUM_DRIVER=virpipe dbus-launch --exit-with-session startxfce"'
+EOF
+chmod +x /data/data/com.termux/files/usr/bin/ubuntu-lts-xfce-x11-2
+
 echo "Installation Complete!"
 echo 'To start command line session: ubuntu-lts-xfce'
+echo 'To start X11 session: ubuntu-lts-xfce-x11-2'
 echo 'To start VNC server: startvnc'
 echo 'To stop VNC server: stopvnc'
 echo 'To restart VNC server: restartvnc'

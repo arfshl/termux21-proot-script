@@ -30,7 +30,7 @@ esac
 mkdir -p /data/data/com.termux/files/home/termux-proot-script/ubuntu-lts-cli/ubuntu-lts
 cd /data/data/com.termux/files/home/termux-proot-script/ubuntu-lts-cli
 curl -L https://github.com/arfshl/termux-proot-script/releases/download/ubuntu-lts/ubuntu-lts-$ARCH.tar.xz --output ubuntu-lts.tar.xz
-proot --link2symlink tar -xJpf ubuntu-lts.tar.xz -C ubuntu
+proot --link2symlink tar -xJpf ubuntu-lts.tar.xz -C ubuntu-lts
 rm ubuntu-lts.tar.xz
 mkdir -p /data/data/com.termux/files/home/termux-proot-script/ubuntu-lts-cli/binds
 mkdir -p /data/data/com.termux/files/home/termux-proot-script/ubuntu-lts-cli/ubuntu-lts/proc/fakethings

@@ -136,7 +136,7 @@ chmod +x /data/data/com.termux/files/usr/bin/ubuntu-lts-lxde
 # setup desktop
 ubuntu-lts-lxde 'apt update && apt install wget -y'
 
-ubuntu-lts-lxde 'wget https://raw.githubusercontent.com/arfshl/proot-distro-desktop/refs/heads/main/ubuntu-lts/lxde/install.sh -O install.sh && chmod +x install.sh && ./install.sh'
+ubuntu-lts-lxde 'wget https://raw.githubusercontent.com/arfshl/proot-distro-desktop/refs/heads/main/ubuntu/lxde/install.sh -O install.sh && chmod +x install.sh && ./install.sh'
 
 # setup x11 script
 cat <<'EOF' > /data/data/com.termux/files/usr/bin/ubuntu-lts-lxde-x11-2
