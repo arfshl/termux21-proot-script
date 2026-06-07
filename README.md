@@ -9,31 +9,22 @@ Supported Desktop Environment:
 
 | Distribution     | Flavor/Desktop Environment | Supported CPU Arch | Docker Registry |
 |------------------|----------------------------|----------------|-----------------|
-| [Alpine Linux](https://github.com/arfshl/pd-andronix/tree/main/alpine) | CLI XFCE LXQt MATE | `arm` `aarch64` `x86` `x86_64` | `alpine:latest` |
-| [Alpine Linux Edge](https://github.com/arfshl/pd-andronix/tree/main/alpine-edge) | CLI XFCE LXQt MATE | `arm` `aarch64` `x86` `x86_64` | `alpine:edge` |
-| [Arch Linux](https://github.com/arfshl/pd-andronix/tree/main/arch) | CLI XFCE LXQt MATE LXDE | `arm` `aarch64` `x86_64` | `archlinux/archlinux` `arfshl/archlinuxarm:latest` |
-| [Debian Stable](https://github.com/arfshl/pd-andronix/tree/main/debian) (Recommended for beginners) | CLI XFCE LXQt MATE LXDE | `arm` `aarch64` `x86_64` | `debian:stable` |
-| [Fedora](https://github.com/arfshl/pd-andronix/tree/main/fedora) | CLI XFCE LXQt MATE LXDE | `aarch64` `x86_64` | `fedora:latest` |
-| [Manjaro](https://github.com/arfshl/pd-andronix/tree/main/manjaro) | CLI XFCE LXQt MATE LXDE | `aarch64` `x86_64` | `manjarolinux/base` | 
-| [OpenSUSE Leap](https://github.com/arfshl/pd-andronix/tree/main/opensuse/) | CLI XFCE LXQt MATE LXDE | `aarch64` `x86_64` | `opensuse/leap` |
-| [OpenSUSE Tumbleweed](https://github.com/arfshl/pd-andronix/tree/main/opensuse-tumbleweed/) | CLI XFCE LXQt MATE LXDE | `aarch64` `x86` `x86_64` | `opensuse/tumbleweed` |
-| [Ubuntu Regular Release](https://github.com/arfshl/pd-andronix/tree/main/ubuntu) | CLI XFCE LXQt MATE LXDE | `arm` `aarch64` `x86_64` | `ubuntu:rolling` |
-| [Ubuntu LTS](https://github.com/arfshl/pd-andronix/tree/main/ubuntu-lts) (Recommended for beginners) | CLI XFCE LXQt MATE LXDE | `arm` `aarch64` `x86_64` | `ubuntu:latest` |
-| [Void Linux musl libc](https://github.com/arfshl/pd-andronix/tree/main/void) | CLI XFCE LXQt MATE LXDE | `arm` `aarch64` `x86_64` | `ghcr.io/void-linux/void-musl:latest` |
-
+| [Debian Stable](https://github.com/arfshl/termux-proot-script/tree/main/debian) (Recommended for beginners) | CLI XFCE LXQt MATE LXDE | `arm` `aarch64` `x86_64` | `debian:stable` |
+| [Ubuntu Regular Release](https://github.com/arfshl/termux-proot-script/tree/main/ubuntu) | CLI XFCE LXQt MATE LXDE | `arm` `aarch64` `x86_64` | `ubuntu:rolling` |
+| [Ubuntu LTS](https://github.com/arfshl/termux-proot-script/tree/main/ubuntu-lts) (Recommended for beginners) | CLI XFCE LXQt MATE LXDE | `arm` `aarch64` `x86_64` | `ubuntu:latest` |
 
 ## Uninstalling
 ```
 - Rootfs-only uninstall
 #!/bin/sh
-cd ~/pd-andronix && chmod -R 777 [distro aliases] && rm -rf [distro aliases]
+cd ~/termux-proot-script && chmod -R 777 [distro aliases] && rm -rf [distro aliases]
 
 rm -f /data/data/com.termux/files/usr/bin/[distro aliases]
 
 
 - Full Uninstall, including in-termux dependency
 #!/bin/sh
-cd ~/pd-andronix && chmod -R 777 [distro aliases] && rm -rf [distro aliases]
+cd ~/termux-proot-script && chmod -R 777 [distro aliases] && rm -rf [distro aliases]
 
 rm -f /data/data/com.termux/files/usr/bin/[distro aliases]
 

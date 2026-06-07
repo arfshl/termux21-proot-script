@@ -3,9 +3,10 @@
 ## CLI
 - distro aliases: ubuntu-lts-cli
 
-
 #### Install
-    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/ubuntu-lts/cli.sh && sh cli.sh && rm ~/cli.sh
+```sh
+curl -fsSL https://raw.githubusercontent.com/arfshl/termux-proot-script/refs/heads/main/ubuntu-lts/cli.sh | bash
+```
 
 ## XFCE
 - distro aliases: ubuntu-lts-xfce
@@ -14,12 +15,15 @@
 - VNC Server Address: 127.0.0.1:5900
 - VNC Server Password: 1234567890
 
-
 #### Install
-    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/ubuntu-lts/xfce.sh && sh xfce.sh && rm ~/xfce.sh
+```sh
+curl -fsSL https://raw.githubusercontent.com/arfshl/termux-proot-script/refs/heads/main/ubuntu-lts/xfce.sh | bash
+```
 
 #### Install Web Browser, Media Player, Utility (Execute on rootfs)
-    sudo apt update && sudo apt install firefox vlc thunderbird atril ristretto galculator libheif1 xarchiver webp-pixbuf-loader fonts-liberation p7zip mousepad && apt clean
+```sh
+sudo apt update && sudo apt install firefox vlc thunderbird atril ristretto galculator libheif1 xarchiver webp-pixbuf-loader fonts-liberation p7zip mousepad && apt clean
+```
 
 ## LXQt
 - distro aliases: ubuntu-lts-lxqt
@@ -28,12 +32,15 @@
 - VNC Server Address: 127.0.0.1:5900
 - VNC Server Password: 1234567890
 
-
 #### Install
-    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/ubuntu-lts/lxqt.sh && sh lxqt.sh && rm ~/lxqt.sh
+```sh
+curl -fsSL https://raw.githubusercontent.com/arfshl/termux-proot-script/refs/heads/main/ubuntu-lts/lxqt.sh | bash
+```
 
 #### Install Web Browser, Media Player, Utility (Execute on rootfs)
-    sudo apt update && sudo apt install firefox vlc thunderbird lximage-qt kcalc lxqt-archiver qpdfview libheif1 webp-pixbuf-loader fonts-liberation p7zip featherpad && apt clean
+```sh
+sudo apt update && sudo apt install firefox vlc thunderbird lximage-qt kcalc lxqt-archiver qpdfview libheif1 webp-pixbuf-loader fonts-liberation p7zip featherpad && apt clean
+```
 
 ## MATE
 - distro aliases: ubuntu-lts-mate
@@ -42,32 +49,39 @@
 - VNC Server Address: 127.0.0.1:5900
 - VNC Server Password: 1234567890
 
-
 #### Install
-    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/ubuntu-lts/mate.sh && sh mate.sh && rm ~/mate.sh
+```sh
+curl -fsSL https://raw.githubusercontent.com/arfshl/termux-proot-script/refs/heads/main/ubuntu-lts/mate.sh | bash
+```
 
 #### Install Web Browser, Media Player, Utility (Execute on rootfs)
-    sudo apt update && sudo apt install firefox vlc thunderbird engrampa atril eom mate-calc pluma libheif1 webp-pixbuf-loader fonts-liberation p7zip && apt clean
+```sh
+sudo apt update && sudo apt install firefox vlc thunderbird engrampa atril eom mate-calc pluma libheif1 webp-pixbuf-loader fonts-liberation p7zip && apt clean
+```
 
-    
-## LXDE 
+## LXDE
 - distro aliases: ubuntu-lts-lxde
 - Username: ubuntu-lts-lxde
 - `sudo` Password: 123
 - VNC Server Address: 127.0.0.1:5900
 - VNC Server Password: 1234567890
 
-
 #### Install
-    apt update && apt install wget -y && wget https://raw.githubusercontent.com/arfshl/pd-andronix/refs/heads/main/ubuntu-lts/lxde.sh && sh lxde.sh && rm ~/lxdee.sh
+```sh
+curl -fsSL https://raw.githubusercontent.com/arfshl/termux-proot-script/refs/heads/main/ubuntu-lts/lxde.sh | bash
+```
 
 #### Install Web Browser, Media Player, Utility (Execute on rootfs)
-    sudo apt update && sudo apt install firefox vlc thunderbird xarchiver atril mousepad galculator gpicview libheif1 webp-pixbuf-loader fonts-liberation p7zip && apt clean
-
+```sh
+sudo apt update && sudo apt install firefox vlc thunderbird xarchiver atril mousepad galculator gpicview libheif1 webp-pixbuf-loader fonts-liberation p7zip && apt clean
+```
 
 ## Installing Chromium
-    sudo su && wget https://raw.githubusercontent.com/arfshl/proot-distro-desktop/refs/heads/main/ubuntu/chromium-install.sh && sh chromium-install.sh && rm chromium-install.sh
+```sh
+curl -fsSL https://raw.githubusercontent.com/arfshl/proot-distro-desktop/refs/heads/main/ubuntu/chromium-install.sh | bash
+```
 
 ## Disable apt Pager at Debian 13 or ubuntu-lts 26.04
-
-      echo 'Binary::apt::Pager "false";' | sudo tee -a  /etc/apt/apt.conf.d/99nopager
+```sh
+echo 'Binary::apt::Pager "false";' | sudo tee -a /etc/apt/apt.conf.d/99nopager
+```
