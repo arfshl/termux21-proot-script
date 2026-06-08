@@ -62,8 +62,8 @@ curl -L https://raw.githubusercontent.com/arfshl/termux21-proot-scripts/refs/hea
 fi
 
 
-if [ ! -f "/data/data/com.termux/files/usr/bin/debian11" ]; then
-cat << "EOF" > /data/data/com.termux/files/usr/bin/debian11
+if [ ! -f "/data/data/com.termux/files/usr/bin/debian11-lxde" ]; then
+cat << "EOF" > /data/data/com.termux/files/usr/bin/debian11-lxde
 #!/bin/bash
 root="/data/data/com.termux/files/home/termux21-proot-script/debian11"
 kernelrelease="$(cat /data/data/com.termux/files/home/termux21-proot-script/debian11-lxde/debian11/proc/fakethings/kernelrelease)"

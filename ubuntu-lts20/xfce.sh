@@ -62,8 +62,8 @@ curl -L https://raw.githubusercontent.com/arfshl/termux21-proot-scripts/refs/hea
 fi
 
 
-if [ ! -f "/data/data/com.termux/files/usr/bin/ubuntu-lts20" ]; then
-cat << "EOF" > /data/data/com.termux/files/usr/bin/ubuntu-lts20
+if [ ! -f "/data/data/com.termux/files/usr/bin/ubuntu-lts20-xfce" ]; then
+cat << "EOF" > /data/data/com.termux/files/usr/bin/ubuntu-lts20-xfce
 #!/bin/bash
 root="/data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20"
 kernelrelease="$(cat /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-lxde/ubuntu-lts20/proc/fakethings/kernelrelease)"

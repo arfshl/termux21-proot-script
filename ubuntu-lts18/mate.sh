@@ -62,7 +62,7 @@ curl -L https://raw.githubusercontent.com/arfshl/termux21-proot-scripts/refs/hea
 fi
 
 
-if [ ! -f "/data/data/com.termux/files/usr/bin/ubuntu-lts18" ]; then
+if [ ! -f "/data/data/com.termux/files/usr/bin/ubuntu-lts18-mate" ]; then
 cat << "EOF" > /data/data/com.termux/files/usr/bin/ubuntu-lts18
 #!/bin/bash
 root="/data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts18"
