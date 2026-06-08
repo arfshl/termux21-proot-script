@@ -1,4 +1,6 @@
-## Lightweight implementation of proot with bash script w/o proot-distro. Fork of andronixapp/andronixorigin.
+## Forked from AndronixApp/AndronixOrigin
+
+## Support for Android 5/6 without proot-distro, based on andronixapp/andronixorigin
 
 ## You Need
 - [Termux App](https://github.com/termux/termux-app/releases)
@@ -7,24 +9,30 @@
 Supported Desktop Environment:
 - XFCE, MATE, LXQt, LXDE (stable and worked well)
 
+## Repo fix (important)
+termux21 scientific and games repo GPG signature is expired and will interfere with apt package manager, we recommends to remove it instead with this command:
+
+    rm $PREFIX/etc/apt/sources.list.d/*
+
 | Distribution     | Flavor/Desktop Environment | Supported CPU Arch | Docker Registry |
 |------------------|----------------------------|----------------|-----------------|
-| [Debian Stable](https://github.com/arfshl/termux-proot-script/tree/main/debian) (Recommended for beginners) | CLI XFCE LXQt MATE LXDE | `arm` `aarch64` `x86_64` | `debian:stable` |
-| [Ubuntu Regular Release](https://github.com/arfshl/termux-proot-script/tree/main/ubuntu) | CLI XFCE LXQt MATE LXDE | `arm` `aarch64` `x86_64` | `ubuntu:rolling` |
-| [Ubuntu LTS](https://github.com/arfshl/termux-proot-script/tree/main/ubuntu-lts) (Recommended for beginners) | CLI XFCE LXQt MATE LXDE | `arm` `aarch64` `x86_64` | `ubuntu:latest` |
+| [Debian 11 Bullseye](https://github.com/arfshl/termux21-proot-script/tree/main/debian11) (Recommended for beginners) | CLI XFCE LXQt MATE LXDE | `arm` `aarch64` `x86_64` | `debian:bullseye` |
+| [Ubuntu 20.04 LTS Focal Fossa](https://github.com/arfshl/termux21-proot-script/tree/main/ubuntu-lts20) (Recommended for beginners) | CLI XFCE LXQt MATE LXDE | `arm` `aarch64` `x86_64` | `ubuntu:focal` |
+| [Debian 10 Buster](https://github.com/arfshl/termux21-proot-script/tree/main/debian10) (Recommended for beginners) | CLI XFCE LXQt MATE LXDE | `arm` `aarch64` `x86_64` | `debian:buster` |
+| [Ubuntu 18.04 LTS Bionic Beaver](https://github.com/arfshl/termux21-proot-script/tree/main/ubuntu-lts18) (Recommended for beginners) | CLI XFCE LXQt MATE LXDE | `arm` `aarch64` `x86_64` | `ubuntu:bionic` |
 
 ## Uninstalling
 ```
 - Rootfs-only uninstall
 #!/bin/sh
-cd ~/termux-proot-script && chmod -R 777 [distro aliases] && rm -rf [distro aliases]
+cd ~/termux21-proot-script && chmod -R 777 [distro aliases] && rm -rf [distro aliases]
 
 rm -f /data/data/com.termux/files/usr/bin/[distro aliases]
 
 
 - Full Uninstall, including in-termux dependency
 #!/bin/sh
-cd ~/termux-proot-script && chmod -R 777 [distro aliases] && rm -rf [distro aliases]
+cd ~/termux21-proot-script && chmod -R 777 [distro aliases] && rm -rf [distro aliases]
 
 rm -f /data/data/com.termux/files/usr/bin/[distro aliases]
 

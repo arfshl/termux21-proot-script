@@ -4,6 +4,6 @@ All /proc entries are based on values retrieved from Kubuntu 24.04.4 LTS running
 
 Linux version 6.17.0-35-generic (buildd@lcy02-amd64-079) (x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0, GNU ld (GNU Binutils for Ubuntu) 2.42) #35~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue May 26 19:30:42 UTC 2 
 
-Kernel version will be updated if needed, and also other components but that may be very rarely.
+Kernel, gcc, and GNU ld version is downgraded here for Android 5 and 6 compatibility
 
 Dedicated for: 1004200828
