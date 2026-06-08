@@ -65,7 +65,7 @@ fi
 if [ ! -f "/data/data/com.termux/files/usr/bin/ubuntu-lts20-lxde" ]; then
 cat << "EOF" > /data/data/com.termux/files/usr/bin/ubuntu-lts20-lxde
 #!/bin/bash
-root="/data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20"
+root="/data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-lxde"
 kernelrelease="$(cat /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-lxde/ubuntu-lts20/proc/fakethings/kernelrelease)"
 kernelversion="$(cat /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-lxde/ubuntu-lts20/proc/fakethings/kernelversion)"
 

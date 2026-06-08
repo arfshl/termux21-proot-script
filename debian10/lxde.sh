@@ -65,7 +65,7 @@ fi
 if [ ! -f "/data/data/com.termux/files/usr/bin/debian10-lxde" ]; then
 cat << "EOF" > /data/data/com.termux/files/usr/bin/debian10-lxde
 #!/bin/bash
-root="/data/data/com.termux/files/home/termux21-proot-script/debian10"
+root="/data/data/com.termux/files/home/termux21-proot-script/debian10-lxde"
 kernelrelease="$(cat /data/data/com.termux/files/home/termux21-proot-script/debian10-lxde/debian10/proc/fakethings/kernelrelease)"
 kernelversion="$(cat /data/data/com.termux/files/home/termux21-proot-script/debian10-lxde/debian10/proc/fakethings/kernelversion)"
 
