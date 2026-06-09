@@ -27,38 +27,38 @@ case "$ARCH" in
         ;;
 esac
 
-mkdir -p /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-lxde/ubuntu-lts20
-cd /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-lxde
+mkdir -p /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-xfce/ubuntu-lts20
+cd /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-xfce
 curl -L https://github.com/arfshl/termux21-proot-script/releases/download/ubuntu-lts20/ubuntu-lts20-$ARCH.tar.xz --output ubuntu-lts20.tar.xz
 proot --link2symlink tar -xJpf ubuntu-lts20.tar.xz -C ubuntu-lts20
 rm ubuntu-lts20.tar.xz
-mkdir -p /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-lxde/binds
-mkdir -p /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-lxde/ubuntu-lts20/proc/fakethings
+mkdir -p /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-xfce/binds
+mkdir -p /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-xfce/ubuntu-lts20/proc/fakethings
 
 # A function for preparing fake /proc entries for certain system data interfaces which known to be restricted on Android OS.
 # Dedicated for: 1004200828
-if [ ! -f "/data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-lxde/ubuntu-lts20/proc/fakethings/version" ]; then
-curl -L https://raw.githubusercontent.com/arfshl/termux21-proot-scripts/refs/heads/main/proc/fakethings/version -o /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-lxde/ubuntu-lts20/proc/fakethings/version
+if [ ! -f "/data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-xfce/ubuntu-lts20/proc/fakethings/version" ]; then
+curl -L https://raw.githubusercontent.com/arfshl/termux21-proot-scripts/refs/heads/main/proc/fakethings/version -o /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-xfce/ubuntu-lts20/proc/fakethings/version
 fi
 
-if [ ! -f "/data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-lxde/ubuntu-lts20/proc/fakethings/stat" ]; then
-curl -L https://raw.githubusercontent.com/arfshl/termux21-proot-scripts/refs/heads/main/proc/fakethings/stat -o /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-lxde/ubuntu-lts20/proc/fakethings/stat
+if [ ! -f "/data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-xfce/ubuntu-lts20/proc/fakethings/stat" ]; then
+curl -L https://raw.githubusercontent.com/arfshl/termux21-proot-scripts/refs/heads/main/proc/fakethings/stat -o /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-xfce/ubuntu-lts20/proc/fakethings/stat
 fi
 
-if [ ! -f "/data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-lxde/ubuntu-lts20/proc/fakethings/vmstat" ]; then
-curl -L https://raw.githubusercontent.com/arfshl/termux21-proot-scripts/refs/heads/main/proc/fakethings/vmstat -o /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-lxde/ubuntu-lts20/proc/fakethings/vmstat
+if [ ! -f "/data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-xfce/ubuntu-lts20/proc/fakethings/vmstat" ]; then
+curl -L https://raw.githubusercontent.com/arfshl/termux21-proot-scripts/refs/heads/main/proc/fakethings/vmstat -o /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-xfce/ubuntu-lts20/proc/fakethings/vmstat
 fi
 
-if [ ! -f "/data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-lxde/ubuntu-lts20/proc/fakethings/loadavg" ]; then
-curl -L https://raw.githubusercontent.com/arfshl/termux21-proot-scripts/refs/heads/main/proc/fakethings/loadavg -o /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-lxde/ubuntu-lts20/proc/fakethings/loadavg
+if [ ! -f "/data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-xfce/ubuntu-lts20/proc/fakethings/loadavg" ]; then
+curl -L https://raw.githubusercontent.com/arfshl/termux21-proot-scripts/refs/heads/main/proc/fakethings/loadavg -o /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-xfce/ubuntu-lts20/proc/fakethings/loadavg
 fi
 
-if [ ! -f "/data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-lxde/ubuntu-lts20/proc/fakethings/kernelversion" ]; then
-curl -L https://raw.githubusercontent.com/arfshl/termux21-proot-scripts/refs/heads/main/proc/fakethings/kernelversion -o /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-lxde/ubuntu-lts20/proc/fakethings/kernelversion
+if [ ! -f "/data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-xfce/ubuntu-lts20/proc/fakethings/kernelversion" ]; then
+curl -L https://raw.githubusercontent.com/arfshl/termux21-proot-scripts/refs/heads/main/proc/fakethings/kernelversion -o /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-xfce/ubuntu-lts20/proc/fakethings/kernelversion
 fi
 
-if [ ! -f "/data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-lxde/ubuntu-lts20/proc/fakethings/kernelrelease" ]; then
-curl -L https://raw.githubusercontent.com/arfshl/termux21-proot-scripts/refs/heads/main/proc/fakethings/kernelrelease -o /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-lxde/ubuntu-lts20/proc/fakethings/kernelrelease
+if [ ! -f "/data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-xfce/ubuntu-lts20/proc/fakethings/kernelrelease" ]; then
+curl -L https://raw.githubusercontent.com/arfshl/termux21-proot-scripts/refs/heads/main/proc/fakethings/kernelrelease -o /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-xfce/ubuntu-lts20/proc/fakethings/kernelrelease
 fi
 
 
@@ -66,8 +66,8 @@ if [ ! -f "/data/data/com.termux/files/usr/bin/ubuntu-lts20-xfce" ]; then
 cat << "EOF" > /data/data/com.termux/files/usr/bin/ubuntu-lts20-xfce
 #!/bin/bash
 root="/data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-xfce"
-kernelrelease="$(cat /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-lxde/ubuntu-lts20/proc/fakethings/kernelrelease)"
-kernelversion="$(cat /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-lxde/ubuntu-lts20/proc/fakethings/kernelversion)"
+kernelrelease="$(cat /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-xfce/ubuntu-lts20/proc/fakethings/kernelrelease)"
+kernelversion="$(cat /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-xfce/ubuntu-lts20/proc/fakethings/kernelversion)"
 
 unset LD_PRELOAD
 
@@ -122,24 +122,24 @@ fi
 EOF
 fi
 
-# chmod +x /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-lxde/ubuntu-lts20/root/.bash_profile
-echo "127.0.0.1 localhost localhost" > /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-lxde/ubuntu-lts20/etc/hosts
-echo "nameserver 1.1.1.1" > /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-lxde/ubuntu-lts20/etc/resolv.conf
-chmod +x /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-lxde/ubuntu-lts20/etc/resolv.conf
-termux-fix-shebang /data/data/com.termux/files/usr/bin/ubuntu-lts20-lxde
-chmod +x /data/data/com.termux/files/usr/bin/ubuntu-lts20-lxde
+# chmod +x /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-xfce/ubuntu-lts20/root/.bash_profile
+echo "127.0.0.1 localhost localhost" > /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-xfce/ubuntu-lts20/etc/hosts
+echo "nameserver 1.1.1.1" > /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-xfce/ubuntu-lts20/etc/resolv.conf
+chmod +x /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-xfce/ubuntu-lts20/etc/resolv.conf
+termux-fix-shebang /data/data/com.termux/files/usr/bin/ubuntu-lts20-xfce
+chmod +x /data/data/com.termux/files/usr/bin/ubuntu-lts20-xfce
 
 # setup desktop
-ubuntu-lts20-lxde 'apt update && apt install wget -y'
+ubuntu-lts20-xfce 'apt update && apt install wget -y'
 
-ubuntu-lts20-lxde 'wget https://raw.githubusercontent.com/arfshl/proot-distro-desktop/refs/heads/main/ubuntu/lxde/install.sh -O install.sh && chmod +x install.sh && ./install.sh'
+ubuntu-lts20-xfce 'wget https://raw.githubusercontent.com/arfshl/proot-distro-desktop/refs/heads/main/ubuntu/xfce/install.sh -O install.sh && chmod +x install.sh && ./install.sh'
 
 echo "Installation Complete!"
-echo 'To start command line session: ubuntu-lts20-lxde'
+echo 'To start command line session: ubuntu-lts20-xfce'
 echo 'To start VNC server: startvnc'
 echo 'To stop VNC server: stopvnc'
 echo 'To restart VNC server: restartvnc'
-echo 'Default user: ubuntu-lts20-lxde'
+echo 'Default user: ubuntu-lts20-xfce'
 echo 'Default password: 123'    
 echo 'VNC server address: 127.0.0.1:5900'
 echo 'Default VNC password: 1234567890'
