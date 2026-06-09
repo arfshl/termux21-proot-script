@@ -30,7 +30,7 @@ esac
 mkdir -p /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-cli/ubuntu-lts20
 cd /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-cli
 curl -L https://github.com/arfshl/termux21-proot-script/releases/download/ubuntu-lts20/ubuntu-lts20-$ARCH.tar.xz --output ubuntu-lts20.tar.xz
-proot --link2symlink tar -xJf ubuntu-lts20.tar.xz -C ubuntu-lts20
+proot --link2symlink tar --delay-directory-restore --no-same-owner --no-same-permissions -xJf ubuntu-lts20.tar.xz -C ubuntu-lts20
 rm ubuntu-lts20.tar.xz
 mkdir -p /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-cli/binds
 mkdir -p /data/data/com.termux/files/home/termux21-proot-script/ubuntu-lts20-cli/ubuntu-lts20/proc/fakethings
