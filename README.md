@@ -20,6 +20,8 @@ termux21 scientific and games repo GPG signature is expired and will interfere w
 | [Ubuntu 20.04 LTS Focal Fossa](https://github.com/arfshl/termux21-proot-script/tree/main/ubuntu-lts20) (Recommended for beginners) | CLI XFCE LXQt MATE LXDE | `arm` `aarch64` `x86_64` | `ubuntu:focal` |
 | [Debian 10 Buster](https://github.com/arfshl/termux21-proot-script/tree/main/debian10) (Recommended for beginners) | CLI XFCE LXQt MATE LXDE | `arm` `aarch64` `x86_64` | `debian:buster` |
 | [Ubuntu 18.04 LTS Bionic Beaver](https://github.com/arfshl/termux21-proot-script/tree/main/ubuntu-lts18) (Recommended for beginners) | CLI XFCE LXQt MATE LXDE | `arm` `aarch64` `x86_64` | `ubuntu:bionic` |
+| [Debian 8 Jessie](https://github.com/arfshl/termux21-proot-script/tree/main/debian8)  | CLI | `arm` `aarch64` `x86_64` | `debian:jessie` |
+| [Ubuntu 14.04 LTS Trusty Tahr](https://github.com/arfshl/termux21-proot-script/tree/main/ubuntu-lts14) | CLI | `arm` `aarch64` `x86_64` | `ubuntu:trusty` |
 
 ## Uninstalling
 ```
